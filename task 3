@@ -1,0 +1,21 @@
+import random
+
+lower_case="abcdefghijklmnopqrstuvwxyz"
+upper_case="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numbers="0123456789"
+symbols="!@#$%^&*/\/"
+# a=int(input("Press 1 to continue or 0 to exit"))
+a=1
+while(a==1):
+    use_for = lower_case + upper_case + numbers + symbols
+    length_for_password = int(input("enter length of password  "))
+
+    password = "".join(random.sample(use_for, length_for_password))
+    print("Your Generated Password is : ", password)
+    # print("\n")
+    a = int(input("Press 1 to continue or 0 to exit "))
+    if(a==1):
+        continue
+    else:
+        print("Thank You")
+        break
